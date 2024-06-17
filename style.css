@@ -1,0 +1,650 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #0A1828;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(img/arte.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #F0F0F0;
+}
+
+nav{
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:0;
+}
+
+#titulo{
+    width: auto;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+    font-size: 6rem; 
+    display: inline-block;
+}
+nav span {
+  color: #14437a;
+}
+.menu {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+}
+.items {
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.instagram {
+  background: transparent;
+  position: relative;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #F0F0F0;
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  text-align: center;
+  transition: color 0.3s ease-out;
+}
+
+/* Estilos para el texto dentro del botón */
+.instagram span {
+  margin: 10px;
+  color: #F0F0F0; /* Color blanco para el texto */
+  position: relative;
+  z-index: 1; /* Asegura que el texto esté por encima del fondo de animación */
+}
+
+/* Estilos para el ícono */
+.instagram svg {
+  fill: #F0F0F0; /* Color blanco para el ícono */
+  width: 1em;
+  height: 1em;
+  margin-right: 5px;
+  transition: fill 0.3s ease-out; /* Transición para el color del ícono */
+  position: relative;
+  z-index: 1; /* Asegura que el ícono esté por encima del fondo de animación */
+}
+
+/* Pseudo-elemento para la animación del círculo */
+.instagram::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: #F0F0F0;
+  border-radius: 50%;
+  transition: width 0.5s ease-out, height 0.5s ease-out, top 0.5s ease-out, left 0.5s ease-out;
+  z-index: 0; /* Asegura que la animación esté detrás del texto y el ícono */
+  transform: translate(-50%, -50%);
+}
+
+/* Efecto de hover para el botón */
+.instagram:hover {
+  color: #F0F0F0; /* Mantiene el color del texto */
+}
+
+.instagram:hover svg {
+  fill: rgb(255, 0, 0); /* Cambia el color del ícono al hacer hover */
+}
+.instagram:hover span {
+  color: rgb(255, 0, 0);
+}
+
+.instagram:hover::before {
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.whatsapp {
+  background: transparent;
+  position: relative;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #F0F0F0;
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  text-align: center;
+  transition: color 0.3s ease-out;
+}
+
+.whatsapp span {
+  margin: 10px;
+  color: #F0F0F0; 
+  position: relative;
+  z-index: 1;
+}
+
+.whatsapp svg {
+  fill: #F0F0F0;
+  width: 1em;
+  height: 1em;
+  margin-right: 5px;
+  transition: fill 0.3s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+.whatsapp::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: #F0F0F0;
+  border-radius: 50%;
+  transition: width 0.5s ease-out, height 0.5s ease-out, top 0.5s ease-out, left 0.5s ease-out;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+.whatsapp:hover {
+  color: #F0F0F0;
+}
+
+.whatsapp:hover svg {
+  fill: rgb(0, 255, 30);
+}
+.whatsapp:hover span {
+  color: rgb(0, 255, 30);
+}
+
+.whatsapp:hover::before {
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+a {
+    text-decoration: none;
+}
+
+.correo {
+  background: transparent;
+  position: relative;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #F0F0F0;
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  text-align: center;
+  transition: color 0.3s ease-out;
+}
+
+.correo span {
+  margin: 10px;
+  color: #F0F0F0; 
+  position: relative;
+  z-index: 1;
+}
+
+.correo svg {
+  fill: #F0F0F0;
+  width: 1em;
+  height: 1em;
+  margin-right: 5px;
+  transition: fill 0.3s ease-out; 
+  position: relative;
+  z-index: 1;
+}
+
+.correo::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: #F0F0F0;
+  border-radius: 50%;
+  transition: width 0.5s ease-out, height 0.5s ease-out, top 0.5s ease-out, left 0.5s ease-out;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+.correo:hover {
+  color: #F0F0F0;
+}
+
+.correo:hover svg {
+  fill: #0A1828;
+}
+.correo:hover span {
+  color: #0A1828;
+}
+
+.correo:hover::before {
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+nav .bottom {
+  width: 50px;
+  height: 50px;
+  flex-wrap: wrap;
+  box-shadow: -2px 2px 0 rgba(255, 255, 255, 0.5);
+  justify-content: end;
+  animation: flecha 1s ease infinite alternate;
+  position: relative; 
+}
+
+.bottom:hover {
+  box-shadow: -2px 2px 0 #F0F0F0;
+}
+
+@keyframes flecha {
+  from {
+    transform: translateY(-5px) rotate(315deg);
+  }
+  to {
+    transform: translateY(5px) rotate(315deg);;
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  margin: 20px;
+  justify-content: space-between;
+  align-items: center;
+  animation: reavel linear both;
+  animation-timeline: view();
+  animation-range: entry 30% cover 40%;
+}
+
+@keyframes reavel {
+  from {
+    opacity: 0;
+    translate: 0 100px;
+    scale: .5;
+    
+  }
+  to {
+    opacity: 3;
+    translate: 0 0;
+    scale: 1; 
+  }
+}
+
+.container img {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 150px;
+  max-width: 430px;
+  border-radius: 10px;
+  transition-duration: .5s;
+  transition-timing-function: ease-in-out;
+}
+.container img:hover {
+  cursor: pointer;
+}
+
+.card {
+  max-width: 500px;
+  padding: 25px;
+  margin: 20px;
+  transition: 300ms ease;
+  background-color: #F0F0F0;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+article:hover {
+  background: #0A1828;
+}
+
+section article:hover {
+  box-shadow: 0 0 10px #F0F0F0;
+  transition-duration: 300ms;
+}
+
+section article h2{
+  font-size: 1.5rem;
+  margin: 1.5rem;
+  text-align: center;
+}
+
+section article:hover {
+  color: #F0F0F0;
+}
+
+section article p {
+  font-size: 1.2rem;
+  margin: 10px 25px;
+}
+
+.galery {
+  width: auto;
+  margin: 0;
+  font-family: 'Dancing Script', cursive;
+  color: #F0F0F0;
+  font-size: 4rem; 
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  animation: reavel linear both;
+  animation-timeline: view();
+  animation-range: entry 30% cover 40%;
+}
+
+.graf {
+  width: auto;
+  margin-bottom: 30px;
+  font-family: 'Dancing Script', cursive;
+  color: #F0F0F0;
+  font-size: 3rem; 
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  animation: reavel linear both;
+  animation-timeline: view();
+  animation-range: entry 30% cover 40%;
+}
+
+.Grafito{
+  display: flex;
+  width: auto;
+  height: 495px;
+  margin: 50px 250px 120px 250px;
+  animation: reavel linear both;
+  animation-timeline: view();
+  animation-range: entry 30% cover 40%;
+}
+.Grafito img{
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .5;
+  transition: .5s ease;
+}
+
+.Grafito img:hover {
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+.colors {
+  width: auto;
+  margin-bottom: 30px;
+  font-family: 'Dancing Script', cursive;
+  color: #F0F0F0;
+  font-size: 3rem; 
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  animation: reavel linear both;
+  animation-timeline: view();
+  animation-range: entry 30% cover 40%;
+}
+
+.Color{
+  display: flex;
+  width: auto;
+  height: 495px;
+  margin: 50px 250px 120px 250px;
+  animation: reavel linear both;
+  animation-timeline: view();
+  animation-range: entry 30% cover 40%;
+}
+.Color img{
+  width: 0;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .5;
+  transition: .5s ease;
+}
+.Color img:hover{
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #F0F0F0;
+  animation: reavel linear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 5%;
+}
+
+footer .copy, footer a {
+  width: auto;
+  margin: 0;
+  color: #0A1828;
+  font-size: 1rem; 
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+@media (min-width: 481px) {
+    #titulo {
+        font-size: 4rem; /* aumenta el tamaño en pantallas medianas */
+    }
+
+    .menu {
+        flex-direction: row; /* fila para pantallas más grandes */
+    }
+
+    .items {
+        gap: 30px; /* ajusta el espacio en pantallas medianas */
+    }
+
+    nav .bottom {
+        top: 80px; /* ajusta la posicion en pantallas medianas */
+    }
+}
+
+@media (min-width: 768px) {
+    #titulo {
+        font-size: 5rem; /* aumenta el tamaño en tabletas */
+    }
+
+    .items {
+        gap: 40px; /* ajusta el espacio en tabletas */
+    }
+
+    nav .bottom {
+        top: 60px; /* ajusta la posicion en tabletas */
+    }
+}
+
+@media (min-width: 1025px) {
+    #titulo {
+        font-size: 6rem; /* tamaño completo en escritorios */
+    }
+
+    .items {
+        gap: 40px; /* espacio máximo en escritorios */
+    }
+
+    nav .bottom {
+        top: 55px; /* ajusta la posicion en escritorios */
+    }
+}
+
+@media (max-width: 480px)  { /* ajustes para dispositivos móviles */
+    .header {
+        background-size: cover; /* ajusta el tamaño de la imagen de fondo */
+        background-position: center; /* posiciona la imagen en la parte superior */
+    }
+
+    #titulo {
+        font-size: 2.5rem; /* el tamaño de fuente se hace más pequeño para pantallas pequeñas */
+    }
+
+    .items {
+        gap: 15px; /* se reduce el espacio entre elementos */
+    }
+
+    nav .bottom {
+        top: 40px; /* ajusta la posicion para pantallas pequeñas */
+    }
+}
+@media (max-width: 768px) {
+  .instagram,
+  .whatsapp,
+  .correo {
+    font-size: 15px; /* reduce el tamaño de la fuente en pantallas medianas */
+    padding: 5px 10px; /* ajusta el padding en pantallas medianas */
+  }
+  
+  .instagram span,
+  .whatsapp span,
+  .correo span {
+    margin: 5px; /* ajusta el margen del texto en pantallas medianas */
+  }
+
+  .instagram svg,
+  .whatsapp svg,
+  .correo svg {
+    width: 0.9em; /* reduce el tamaño del ícono en pantallas medianas */
+    height: 0.9em;
+  }
+
+  .instagram:hover::before,
+  .whatsapp:hover::before,
+  .correo:hover::before {
+    width: 150px; /* reduce el tamaño de la animación en pantallas medianas */
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .instagram,
+  .whatsapp,
+  .correo {
+    font-size: 13px; /* reduce aún más el tamaño de la fuente en pantallas pequeñas */
+    padding: 3px 8px; /* ajusta el padding en pantallas pequeñas */
+  }
+  
+  .instagram span,
+  .whatsapp span,
+  .correo span {
+    margin: 3px; /* ajusta el margen del texto en pantallas pequeñas */
+  }
+
+  .instagram svg,
+  .whatsapp svg,
+  .correo svg {
+    width: 0.8em; /* reduce aún más el tamaño del ícono en pantallas pequeñas */
+    height: 0.8em;
+  }
+
+  .instagram:hover::before,
+  .whatsapp:hover::before,
+  .correo:hover::before {
+    width: 120px; /* Reduce el tamaño de la animación en pantallas pequeñas */
+    height: 120px;
+  }
+}
+@media (max-width: 768px) {
+  .content {
+      flex-direction: column; /* cambia a columna en pantallas medianas */
+      align-items: center;
+  }
+
+  .card {
+      width: 80%; /* asegura que las tarjetas ocupen el ancho completo */
+      margin: 10px 0; /* ajusta el margen para pantallas medianas */
+  }
+
+  .galery, .graf, .colors {
+      font-size: 2rem; /* reduce el tamaño de la fuente para pantallas medianas */
+  }
+
+  .Grafito, .Color {
+      margin: 50px 10px 120px 10px; /* ajuste de márgenes para pantallas medianas */
+  }
+
+  footer .copy, footer a {
+      font-size: 0.9rem; /* reduce el tamaño de la fuente en el footer */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+      padding: 40px 0; /* reduce el padding en pantallas pequeñas */
+  }
+
+  .content {
+      flex-direction: column; /* mantiene la columna en pantallas pequeñas */
+      align-items: center;
+      margin: 10px 0; /* ajusta el margen para pantallas pequeñas */
+  }
+
+  .card {
+      height: 80%;
+      width: 90%; /* asegura que las tarjetas ocupen el ancho completo */
+      margin: 10px 0; /* ajusta el margen para pantallas pequeñas */
+  }
+
+  .galery, .graf, .colors {
+      font-size: 1.5rem; /* reduce el tamaño de la fuente para pantallas pequeñas */
+  }
+
+  .Grafito, .Color {
+      margin: 50px 5px 120px 5px; /* ajusta el márgenes para pantallas pequeñas */
+  }
+
+  footer .copy, footer a {
+      font-size: 0.8rem; /* reduce el tamaño de la fuente en el footer */
+  }
+}
